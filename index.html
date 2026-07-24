@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio B2B</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <h1>Portfolio B2B</h1>
+    <header>
+        <nav class="navbar">
+            <!-- 1. Logo -->
+            <a href="#" class="logo">weeb</a>
 
+            <!-- Botão Hambúrguer (Aparece apenas no Mobile) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <img src="/src/icons/menu.svg" alt="Menu">
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <!-- 2. Menu de Links -->
+                <ul class="nav-links">
+                    <li><a href="#home">About us</a></li>
+                    <li><a href="#about">Solutions</a></li>
+                    <li><a href="#services">Pricing</a></li>
+                    <li><a href="#contact">Resources</a></li>
+
+                </ul>
+
+                <!-- 3. Ações de Login e Botão -->
+                <div class="nav-actions">
+                    <a href="#login" class="btn-login">Log In</a>
+                    <a href="#join" class="btn-join">Join Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 </body>
 </html>
