@@ -1,0 +1,7 @@
+/* 1. Base e Configurações Globais (Sempre em primeiro!) */
+@import url('./base.css');
+
+/* 2. Componentes Estruturais */
+@import url('./header.css');
+@import url('./nav.css');
+
