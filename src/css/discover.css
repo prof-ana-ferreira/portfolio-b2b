@@ -1,0 +1,117 @@
+/* ===================================================
+   DISCOVER SECTION
+   =================================================== */
+
+.discover {
+  width: 100%;
+  padding: 4.8rem 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.discover-container {
+  max-width: 110rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.discover-image {
+  width: 100%;
+  max-width: 28rem;
+  display: flex;
+  justify-content: center;
+  margin: 4.8rem 0;
+}
+
+.discover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.discover-tag {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: var(--white, #ffffff);
+  display: block;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.discover-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--white, #ffffff);
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.discover-title .purple-text {
+  color: var(--purple-400, #c084fc);
+}
+
+.discover-title .boxed-text {
+  border: 0.2rem solid #ea580c;
+  padding: 0 0.6rem;
+  display: inline-block;
+}
+
+.discover-description {
+  font-size: 1.5rem;
+  color: var(--blue-gray-300, #94a3b8);
+  line-height: 1.6;
+  max-width: 48rem;
+  margin: 0 auto 2.4rem auto;
+}
+
+.discover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--white, #ffffff);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.discover-link:hover {
+  color: var(--purple-400, #c084fc);
+  gap: 1.2rem;
+}
+
+/* Desktop (768px+) */
+@media (min-width: 768px) {
+  .discover-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 6rem;
+  }
+
+  .discover-content {
+    flex: 1;
+    max-width: 60rem;
+  }
+
+  /* No desktop a imagem vai para o lado direito */
+  .discover-image {
+    flex: 1;
+    max-width: 40rem;
+    justify-content: flex-end;
+    order: 2; 
+  }
+
+  .discover-title {
+    font-size: 4.8rem;
+  }
+
+  .discover-description {
+    margin-left: 0;
+  }
+}

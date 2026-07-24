@@ -1,0 +1,59 @@
+/* ===================================================
+   COMPANIES SECTION
+   =================================================== */
+
+.companies {
+  width: 100%;
+  padding: 4.8rem 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.companies-container {
+  max-width: 110rem;
+  width: 100%;
+  text-align: center;
+}
+
+.companies-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--white, #ffffff);
+  margin-bottom: 3.2rem;
+}
+
+.companies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem 3.2rem;
+}
+
+.company-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--white, #ffffff);
+  font-weight: 700;
+  font-size: 1.8rem;
+  opacity: 0.9;
+}
+
+.company-item img {
+  height: 2.4rem;
+  width: auto;
+  display: block;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .companies-title {
+    font-size: 3.6rem;
+  }
+
+  .companies-grid {
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
