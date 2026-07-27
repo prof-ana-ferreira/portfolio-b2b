@@ -48,22 +48,38 @@ A seção de **"Cases de Sucesso / Clientes Atendidos"** consome dinamicamente o
 
 O projeto foi projetado seguindo a filosofia *Mobile-First*, garantindo adaptação fluida nos três pontos de quebra (*breakpoints*) especificados:
 
-1. **Mobile (390px):** Layout em coluna única, onde todos os blocos e cards de clientes ocupam 100% da largura da tela.
-2. **Tablet (768px):** Transição para duas colunas no conteúdo principal, organizando os cards de clientes em um grid de 2 colunas.
-3. **Desktop (1440px):** Layout completo mapeado com `grid-template-areas`. O menu de navegação (`<nav>`) alinha-se ao topo e os cards de clientes distribuem-se em 3 colunas paralelas.
+1. **Mobile (390px):** Layout em coluna única (flex-direction: column), onde os blocos, navegações e cards ocupam 100% da largura da tela, com rolagem horizontal nos carrosséis para melhor usabilidade em dispositivos móveis.
+2. **Tablet (768px):** Adaptação do fluxo de elementos usando Flexbox, organizando as seções em layouts de duas colunas ou ajustando o espaçamento para telas intermediárias.
+3. **Desktop (1440px):** Layout completo e expandido construído com Flexbox. O menu de navegação (`<nav>`) alinha-se horizontalmente ao topo e as seções organizam seus cards e conteúdos em colunas paralelas bem distribuídas, mantendo o carrossel centralizado e interativo.
 
 ---
 
 ## 📁 Estrutura de Arquivos do Projeto
 
-```text
+```
 ├── src/
-│   ├── icons/
-│   └── img/
-├── index.html     # Estrutura HTML5 semântica
-├── style.css      # Estilização CSS Grid e Media Queries (Mobile-First)
-├── script.js      # Lógica JS de consumo da API e renderização no DOM
-└── README.md      # Documentação do projeto
+│   ├── css/
+│   │   ├── base.css          # Estilos globais e reset
+│   │   ├── components.css    # Estilos de componentes reutilizáveis
+│   │   ├── customers.css     # Estilos da seção de clientes
+│   │   ├── discover.css      # Estilos da seção discover
+│   │   ├── events.css        # Estilos da seção de eventos
+│   │   ├── footer.css        # Estilos do rodapé
+│   │   ├── header.css        # Estilos do cabeçalho
+│   │   ├── hero.css          # Estilos da seção principal (Hero)
+│   │   ├── nav.css           # Estilos da barra de navegação
+│   │   ├── speed.css         # Estilos da seção de velocidade/performance
+│   │   ├── styles.css        # Arquivo principal de importação do CSS
+│   │   ├── testimonials.css  # Estilos da seção de depoimentos/carrossel
+│   │   └── tools.css         # Estilos da seção de ferramentas
+│   ├── icons/                # Ícones SVG e assets vetoriais
+│   ├── img/                  # Imagens e avatares do projeto
+│   └── js/
+│       ├── nav.js            # Comportamento do menu de navegação
+│       └── testimonials.js   # Lógica do carrossel e consumo de depoimentos
+├── index.html                # Estrutura HTML5 semântica principal
+├── script.js                 # Script principal da aplicação
+└── README.md                 # Documentação do projeto
 ```
 
 ---
