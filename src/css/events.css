@@ -11,7 +11,7 @@
 }
 
 .events-container {
-  max-width: 120rem; /* Limite de largura para telas grandes */
+  max-width: 110rem; /* Limite de largura para telas grandes */
   margin: 0 auto;
 }
 
