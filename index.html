@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/css/styles.css">
 
     <script type="module" src="script.js" defer></script>
+    <script src="./src/js/testimonials.js" defer></script>
 </head>
 <body>
     <header>
@@ -213,6 +214,41 @@
             </div>
 
         </div>
+        </section>
+
+        <!-- Seção Testimonials / Partners -->
+        <section class="testimonials">
+            <div class="testimonials-container">
+                
+                <!-- Header da Seção -->
+                <div class="testimonials-header">
+                <h2 class="testimonials-title">
+                    Our partners. Our Friends.
+                    <span class="purple-highlight">They love us.</span>
+                </h2>
+                <p class="testimonials-subtitle">
+                    Veja o que nossos parceiros e clientes dizem sobre como transformamos suas rotinas e aceleramos seus resultados.
+                </p>
+                </div>
+
+                <!-- Container dos Cards (JS vai popular aqui) -->
+                <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-cards" id="testimonials-cards">
+                    <!-- Os cards serão inseridos dinamicamente aqui -->
+                </div>
+                </div>
+
+                <!-- Botões do Carrossel -->
+                <div class="testimonials-controls">
+                <button class="carousel-btn" id="prev-btn" aria-label="Depoimento anterior">
+                    <span class="arrow">&larr;</span> Prev
+                </button>
+                <button class="carousel-btn" id="next-btn" aria-label="Próximo depoimento">
+                    Next <span class="arrow">&rarr;</span>
+                </button>
+                </div>
+
+            </div>
         </section>
 
     </main>

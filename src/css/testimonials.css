@@ -1,0 +1,194 @@
+/* ===================================================
+   TESTIMONIALS SECTION (Mobile First)
+   =================================================== */
+
+.testimonials {
+  width: 100%;
+  background-color: #4c1d95; /* Fundo Roxo da Seção */
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- CABEÇALHO --- */
+.testimonials-header {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+  max-width: 60rem;
+}
+
+.testimonials-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--white, #ffffff);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.testimonials-title .purple-highlight {
+  display: block;
+  color: #c084fc; /* Roxo claro */
+}
+
+.testimonials-subtitle {
+  font-size: 1.5rem;
+  color: #e9d5ff;
+  line-height: 1.5;
+}
+
+/* --- CARROSSEL / WRAPPER --- */
+.testimonials-carousel-wrapper {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.testimonials-cards {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente para permitir o aumento de escala */
+  gap: 2.4rem;
+  padding: 3rem 0; /* Aumentado ligeiramente para não cortar a sombra/escala */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonials-cards::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Espaçamento dinâmico para permitir que o 1º e último card parem no centro exato */
+.testimonials-cards::before,
+.testimonials-cards::after {
+  content: '';
+  flex: 0 0 calc(50vw - 16rem); /* Preenche metade da tela */
+}
+
+/* Card Padrão (Inativos / Laterais) */
+.testimonial-card {
+  flex: 0 0 30rem;
+  min-height: 32rem; /* Mantém a uniformidade da altura dos cards da API */
+  background-color: #f8fafc;
+  border-radius: 2rem;
+  padding: 3.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: center;
+  
+  /* Transição e animação de escala/opacidade */
+  opacity: 0.55;
+  transform: scale(0.9);
+  transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* CARD DO MEIO (ATIVO) */
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1.08); /* Fica maior que os outros */
+  box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* Empresa/Logo */
+.card-company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  color: #a855f7;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.company-logo {
+  height: 2.8rem;
+  width: auto;
+}
+
+/* Texto do Depoimento */
+.card-text {
+  font-size: 1.5rem;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* Autor */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.author-avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.author-role {
+  font-size: 1.3rem;
+  color: #a855f7;
+}
+
+/* --- BOTÕES DE NAVEGAÇÃO PREV / NEXT --- */
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 1rem;
+}
+
+.carousel-btn {
+  background: transparent;
+  border: none;
+  color: var(--white, #ffffff);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* ===================================================
+   DESKTOP (768px+)
+   =================================================== */
+@media (min-width: 768px) {
+  .testimonials-title {
+    font-size: 4.8rem;
+  }
+
+  .testimonial-card {
+    flex: 0 0 35rem;
+  }
+  
+  .testimonials-cards::before,
+  .testimonials-cards::after {
+    flex: 0 0 calc(50vw - 20rem);
+  }
+}
