@@ -94,15 +94,22 @@ function updateActiveCard() {
 function initCarouselFocus() {
   const cards = document.querySelectorAll('.testimonial-card');
   
-  // Centraliza no 3º card (índice 2) ao carregar a página
+  // Centraliza no 3º card (índice 2) sem mover o scroll vertical da página
   if (cards.length >= 3) {
     const targetCard = cards[2];
-    targetCard.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+    
+    // Calcula a posição exata de scroll horizontal no container interno
+    const containerWidth = cardsContainer.offsetWidth;
+    const cardOffsetLeft = targetCard.offsetLeft;
+    const cardWidth = targetCard.offsetWidth;
+
+    // Rola APENAS o container do carrossel para a posição do card central
+    cardsContainer.scrollLeft = cardOffsetLeft - (containerWidth / 2) + (cardWidth / 2);
   }
 
   updateActiveCard();
 
-  // Atualiza a classe active conforme o usuário faz scroll
+  // Atualiza a classe active conforme o usuário rola o carrossel
   cardsContainer.addEventListener('scroll', updateActiveCard);
 }
 
