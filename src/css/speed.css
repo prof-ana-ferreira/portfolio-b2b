@@ -1,0 +1,105 @@
+/* ===================================================
+   SPEED SECTION (Mobile First)
+   =================================================== */
+
+.speed {
+  width: 100%;
+  padding: 4rem 2rem 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.speed-container {
+  max-width: 110rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3.2rem;
+}
+
+/* --- MOCKUP DA IMAGEM --- */
+.speed-image {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  justify-content: center;
+}
+
+.speed-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* --- CONTEÚDO DE TEXTO --- */
+.speed-content {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.speed-tag {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: var(--white, #ffffff);
+  display: block;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.speed-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--white, #ffffff);
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.speed-description {
+  font-size: 1.5rem;
+  color: var(--blue-gray-300, #94a3b8);
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* ===================================================
+   DESKTOP (768px+)
+   =================================================== */
+@media (min-width: 768px) {
+  .speed {
+    padding: 6rem 2rem;
+  }
+
+  .speed-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 6rem;
+  }
+
+  /* No Desktop: O texto vai para a esquerda (order: 1) e a imagem para a direita (order: 2) */
+  .speed-content {
+    order: 1;
+    flex: 1;
+    max-width: 48rem;
+  }
+
+  .speed-image {
+    order: 2;
+    flex: 1.2;
+    max-width: 58rem;
+    justify-content: flex-end;
+  }
+
+  .speed-title {
+    font-size: 4.8rem;
+  }
+
+  .speed-description {
+    font-size: 1.6rem;
+    margin-left: 0;
+  }
+}
