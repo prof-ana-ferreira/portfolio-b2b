@@ -1,0 +1,166 @@
+/* ===================================================
+   EVENTS SECTION (Mobile First)
+   =================================================== */
+
+.events-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  /* Linha roxa superior presente nas imagens de referência */
+  border-top: 6px solid #4c1d95;
+}
+
+.events-container {
+  max-width: 120rem; /* Limite de largura para telas grandes */
+  margin: 0 auto;
+}
+
+/* --- CABEÇALHO --- */
+.events-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.events-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.explore-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a855f7;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.explore-link:hover {
+  color: #7e22ce;
+  transform: translateX(4px);
+}
+
+/* --- GRID DE CARDS --- */
+.events-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* --- CARD INDIVIDUAL --- */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .card-image {
+  transform: scale(1.04);
+}
+
+/* Tag/Badge sobreposta na imagem */
+.card-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  color: #a855f7;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+}
+
+/* Conteúdo abaixo da imagem */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-category {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.6rem;
+}
+
+.card-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 1.6rem;
+}
+
+.buy-tickets-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a855f7;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.buy-tickets-link:hover {
+  color: #7e22ce;
+  transform: translateX(4px);
+}
+
+.arrow {
+  font-size: 1.4rem;
+}
+
+/* ===================================================
+   DESKTOP (768px+)
+   =================================================== */
+@media (min-width: 768px) {
+  .events-section {
+    padding: 6rem 4rem;
+  }
+
+  .events-header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+
+  .events-title {
+    font-size: 4rem;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+}
