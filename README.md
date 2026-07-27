@@ -38,10 +38,9 @@ A seção de **"Cases de Sucesso / Clientes Atendidos"** consome dinamicamente o
 * **Endpoint:** `https://jsonplaceholder.typicode.com/users`
 * **Regra de Negócio:** A aplicação busca a lista de usuários, filtra estritamente os **5 primeiros resultados** e mapeia as propriedades recebidas para popular os cards de depoimentos (`<article>`):
   * **Empresa:** `company.name`
-  * **Depoimento / Slogan:** `company.catchPhrase`
+  * **Depoimento / Slogan:** `company.catchPhrase` e `company.bs`
   * **Responsável:** `name`
   * **Cidade:** `address.city`
-  * **Contato:** `email` e `website`
 
 ---
 

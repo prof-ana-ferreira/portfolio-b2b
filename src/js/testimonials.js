@@ -54,7 +54,7 @@ function createCardHTML(user, index) {
         <img src="${avatarUrl}" alt="Foto de ${user.name}" class="author-avatar" loading="lazy" />
         <div class="author-info">
           <h4 class="author-name">${user.name}</h4>
-          <span class="author-role">Co-founder</span>
+          <span class="author-role">Co-founder / ${user.address.city}</span>
         </div>
       </div>
     </article>
