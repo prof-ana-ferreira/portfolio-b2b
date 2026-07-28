@@ -5,7 +5,7 @@
 .events-section {
   width: 100%;
   background-color: #ffffff;
-  padding: 4rem 2rem;
+  padding: var(--spacing-vertical) var(--spacing-horizontal);
   /* Linha roxa superior presente nas imagens de referência */
   border-top: 6px solid #4c1d95;
 }

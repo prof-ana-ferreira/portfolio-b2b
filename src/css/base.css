@@ -21,6 +21,8 @@
 
     --max-width-nav: 100rem;
     --max-width-container: 128rem;
+    --spacing-vertical: 4.8rem;
+    --spacing-horizontal: 1.6rem;
 }
 
 html {

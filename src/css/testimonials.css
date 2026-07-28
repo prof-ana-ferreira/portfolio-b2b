@@ -5,7 +5,7 @@
 .testimonials {
   width: 100%;
   background-color: #4c1d95; /* Fundo Roxo da Seção */
-  padding: 6rem 0;
+  padding: var(--spacing-vertical) var(--spacing-horizontal);
   overflow: hidden;
 }
 
