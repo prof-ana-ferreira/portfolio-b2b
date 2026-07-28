@@ -65,7 +65,7 @@
 
 /* Destaque Rosa com fundo preenchido atrás das letras "cust" */
 .customers-title .pink-box .highlight {
-  background-color: #be185d; /* Rosa/Magenta do protótipo */
+  background-color: var(--rose, #E11D48); /* Rosa/Magenta do protótipo */
   color: var(--white, #ffffff);
   padding: 0 0.4rem;
   display: inline-block;

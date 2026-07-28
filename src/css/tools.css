@@ -56,7 +56,7 @@
   letter-spacing: 0.2rem;
   color: var(--white, #ffffff);
   text-transform: uppercase;
-  border: 0.2rem solid #ea580c; /* Moldura laranja */
+  border: 0.2rem solid var(--orange-700, #ea580c); /* Moldura laranja */
   padding: 0.4rem 0.8rem;
   display: inline-block;
 }

@@ -4,10 +4,10 @@
 
 .events-section {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--white, #ffffff);
   padding: var(--spacing-vertical) var(--spacing-horizontal);
   /* Linha roxa superior presente nas imagens de referência */
-  border-top: 6px solid #4c1d95;
+  border-top: 6px solid var(--purple-600, #9333EA);
 }
 
 .events-container {
@@ -28,14 +28,14 @@
 .events-title {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--blue-gray-900, #0f172a);
   line-height: 1.15;
 }
 
 .explore-link {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #a855f7;
+  color: var(--purple-600, #9333EA);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -44,7 +44,7 @@
 }
 
 .explore-link:hover {
-  color: #7e22ce;
+  color: var(--purple-700, #7E22CE);
   transform: translateX(4px);
 }
 
@@ -90,7 +90,7 @@
   left: 1.2rem;
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
-  color: #a855f7;
+  color: var(--purple-700, #7E22CE);
   font-size: 1.1rem;
   font-weight: 700;
   padding: 0.4rem 1rem;
@@ -107,14 +107,14 @@
 .card-category {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--blue-gray-600, #475569);
   margin-bottom: 0.6rem;
 }
 
 .card-title {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--blue-gray-900, #0f172a);
   line-height: 1.25;
   margin-bottom: 1.6rem;
 }
@@ -122,7 +122,7 @@
 .buy-tickets-link {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #a855f7;
+  color: var(--purple-600, #9333EA);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -131,7 +131,7 @@
 }
 
 .buy-tickets-link:hover {
-  color: #7e22ce;
+  color: var(--purple-700, #7E22CE);
   transform: translateX(4px);
 }
 

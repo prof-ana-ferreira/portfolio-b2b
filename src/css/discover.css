@@ -56,7 +56,7 @@
 }
 
 .discover-title .boxed-text {
-  border: 0.2rem solid #ea580c;
+  border: 0.2rem solid var(--orange-700, #c2410c);
   padding: 0 0.6rem;
   display: inline-block;
 }
