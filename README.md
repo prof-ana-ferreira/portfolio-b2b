@@ -24,7 +24,7 @@ O design do layout e os breakpoints responsivos foram desenvolvidos e disponibil
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
 * **HTML5 Semântico:** Estruturação otimizada para acessibilidade e SEO utilizando as tags `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` e `<footer>`.
-* **CSS3 (Mobile-First & CSS Grid Areas):** Layout totalmente responsivo construído do menor para o maior breakpoint, com reorganização de layout via `grid-template-areas`.
+* **CSS3 (Mobile-First & Flexbox):** Layout totalmente responsivo construído com a abordagem Mobile-First, utilizando Flexbox para o alinhamento, distribuição de elementos e adaptação fluida nos breakpoints.
 * **JavaScript (ES6+):** Consumo assíncrono de API via `fetch`, manipulação dinâmica do DOM com Template Literals e renderização de dados.
 * **JSONPlaceholder API:** Fonte de dados externa para simular informações reais de empresas parceiras.
 * **W3C Validator:** Garantia de conformidade e boas práticas na escrita do código HTML.
