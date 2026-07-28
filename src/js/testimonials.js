@@ -2,10 +2,6 @@
    TESTIMONIALS - API FETCH & CENTERED CAROUSEL
    =================================================== */
 
-const cardsContainer = document.getElementById('testimonials-cards');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-
 const avatarImages = [
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
@@ -14,7 +10,35 @@ const avatarImages = [
   'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80'
 ];
 
-async function loadTestimonials() {
+/**
+ * Função principal que será chamada pelo script.js
+ */
+export async function initTestimonials() {
+  const cardsContainer = document.getElementById('testimonials-cards');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  // Trava de segurança: se o container não existir na página, para por aqui
+  if (!cardsContainer) return;
+
+  // 1. Busca os dados na API e renderiza
+  await loadTestimonials(cardsContainer);
+
+  // 2. Configura os eventos dos botões de navegação
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      cardsContainer.scrollBy({ left: 340, behavior: 'smooth' });
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      cardsContainer.scrollBy({ left: -340, behavior: 'smooth' });
+    });
+  }
+}
+
+async function loadTestimonials(cardsContainer) {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     if (!response.ok) throw new Error('Erro ao carregar os dados');
@@ -30,10 +54,10 @@ async function loadTestimonials() {
     });
 
     // Após renderizar, inicializa a centralização e observador
-    initCarouselFocus();
+    initCarouselFocus(cardsContainer);
 
   } catch (error) {
-    console.error(error);
+    console.error('Erro na seção de depoimentos:', error);
   }
 }
 
@@ -64,8 +88,8 @@ function createCardHTML(user, index) {
 /**
  * Gerencia a ativação visual do card que estiver no centro
  */
-function updateActiveCard() {
-  const cards = document.querySelectorAll('.testimonial-card');
+function updateActiveCard(cardsContainer) {
+  const cards = cardsContainer.querySelectorAll('.testimonial-card');
   const containerCenter = cardsContainer.getBoundingClientRect().left + cardsContainer.offsetWidth / 2;
 
   let closestCard = null;
@@ -91,8 +115,8 @@ function updateActiveCard() {
 /**
  * Inicializa a posição no centro e os eventos de scroll
  */
-function initCarouselFocus() {
-  const cards = document.querySelectorAll('.testimonial-card');
+function initCarouselFocus(cardsContainer) {
+  const cards = cardsContainer.querySelectorAll('.testimonial-card');
   
   // Centraliza no 3º card (índice 2) sem mover o scroll vertical da página
   if (cards.length >= 3) {
@@ -107,19 +131,8 @@ function initCarouselFocus() {
     cardsContainer.scrollLeft = cardOffsetLeft - (containerWidth / 2) + (cardWidth / 2);
   }
 
-  updateActiveCard();
+  updateActiveCard(cardsContainer);
 
   // Atualiza a classe active conforme o usuário rola o carrossel
-  cardsContainer.addEventListener('scroll', updateActiveCard);
+  cardsContainer.addEventListener('scroll', () => updateActiveCard(cardsContainer));
 }
-
-// Botões Prev / Next rolam até o card adjacente
-nextBtn.addEventListener('click', () => {
-  cardsContainer.scrollBy({ left: 340, behavior: 'smooth' });
-});
-
-prevBtn.addEventListener('click', () => {
-  cardsContainer.scrollBy({ left: -340, behavior: 'smooth' });
-});
-
-loadTestimonials();
